@@ -1,0 +1,43 @@
+        .location {
+            /* SHADOW */
+            -moz-box-shadow: 1px 1px 2px 2px #ccc;
+            -webkit-box-shadow: 1px 1px 2px 2px #ccc;
+            box-shadow: 1px 1px 2px 2px #ccc;
+            /* ODVOJI JEDAN OD DRUGOG */
+            margin-bottom: 5px;
+            /* POZADINA _ bila je prozirna, vidila se pozadinska slika, nije valjalo */
+            background-color: white;
+        }
+
+        .controls {
+            /* SHADOW */
+            -moz-box-shadow: 1px 1px 1px 1px #ccc;
+            -webkit-box-shadow: 1px 1px 1px 1px #ccc;
+            box-shadow: 1px 1px 1px 1px #ccc;
+            position: relative;
+            top: -15px;
+            margin-bottom: -10px;
+            left: -20px;
+            width: 110%;
+        }
+
+            .controls .glyphicon {
+                font-size: 24px;
+            }
+
+            .controls .glyphicon-ok-circle {
+                color: #74BB3A;
+            }
+
+                .controls .glyphicon-ok-circle:hover {
+                    color: #48A500;
+                    /*#2ECC71;*/
+                }
+
+            .controls .glyphicon-remove-circle {
+                color: #ED3939;
+            }
+
+                .controls .glyphicon-remove-circle:hover {
+                    color: #C22727;
+                }
