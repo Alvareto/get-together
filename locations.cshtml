@@ -1,0 +1,85 @@
+@{
+    //Dictionary<string, int> Locations = new Dictionary<string, int>()
+    //{
+    //    {"Zrce, Croatia", 230 },
+    //    {"New York, USA", 14630 },
+    //    {"Tisno, Croatia", 337 },
+    //    {"Ibiza, Spain", 1985 }
+    //};
+    List<Movies.Location> Locations = new List<Movies.Location>
+    {
+        /* This is hardcoded just for demo - I'll add the database later */
+        new Movies.Location("Zrce", "Croatia", "Zrce partijana 69", 203, 14700, 8500),
+        new Movies.Location("Ibiza", "Spain", "Party Zone 231c", 943, 19300, 120500),
+        new Movies.Location("New York", "USA", "Broadway Avenue 13", 2976, 1500, 634000),
+        new Movies.Location("Tisno", "Croatia", "Garden Festival", 314, 5500, 500)
+    };
+
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Locations</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <link href="css/dvorana.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <section class="container">
+        <div class="center-block">
+            @foreach (var location in Locations)
+            {
+                //var cost = (new Random()).Next(0, location.) * 1000;
+                //var cap = (cost / (new Random()).Next(0, location.Value)) * 100;
+                var mapLink = @"http://maps.google.com/maps/api/staticmap?center=" + location.Place + "," + location.Country + @"&amp;zoom=9&amp;size=640x500&amp;maptype=terrain&amp;markers=color:blue%7Clabel:S%7C40.702147,-74.015794&amp;markers=color:green%7Clabel:G%7C40.711614,-74.012318&amp;markers=color:red%7Ccolor:red%7Clabel:C%7C40.718217,-73.998284&amp;sensor=false";
+                <div class="row location">
+                    <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12 applewrap">
+                        <div class="maps">
+                            <img class="img-responsive" src="@mapLink" alt="We couldn't load your image. sorry :("> <!-- STATIC MAP PICTURE OF THE LOCATION SOURCE -->
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 applewrap ">
+                        <div class="dvoranaPicture">
+                            <div class="dvoranaDescription">
+                                <h3>@* IME LOKACIJE, DRŽAVA LOKACIJE *@@location.Place, @location.Country </h3><br />
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <b>Address: </b>@* ADRESA LOKACIJE *@@location.Address<br /><br />
+                                        <b>Distance: </b>@* UDALJENOST LOKACIJE OD KORISNIKA *@@location.Distance<b> km</b><br /><br />
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <b>Capacity: </b>@* KAPACITET LOKACIJE *@@location.Capacity<br /><br />
+                                        <b>Cost: $</b>@* CIJENA LOKACIJE *@@location.Cost<br /><br />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3 center-block">
+                                        <span class="glyphicon glyphicon-ok-circle"></span>
+                                        <span class="glyphicon glyphicon-remove-circle"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+</body>
+</html>
