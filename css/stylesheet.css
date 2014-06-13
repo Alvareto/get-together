@@ -1,62 +1,62 @@
 body {
-            background: none;
-            background-color: white;
-        }
+    background: none;
+    background-color: white;
+}
 
-        .background {
-            background: url("scene-light-hands-concert-1800x2880.jpg") top no-repeat;
-            background-color: black;
-        }
+.background {
+    background: url("scene-light-hands-concert-1800x2880.jpg") top no-repeat;
+    background-color: black;
+}
 
-        #banner {
-            position: fixed;
-            height: 100px;
-            width: 100%;
-            top: 0;
-            left: 0;
-            border-top: 5px solid #D55101;
-            background: #fff;
-            -moz-box-shadow: 0 2px 3px 0 rgba(0,0,0,.16);
-            -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,.16);
-            box-shadow: 0 2px 3px 0 rgba(0,0,0,0.16);
-            z-index: 999999;
-            transition: height 500ms;
-        }
+#banner {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-top: 5px solid #D55101;
+    background: #fff;
+    -moz-box-shadow: 0 2px 3px 0 rgba(0,0,0,.16);
+    -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,.16);
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.16);
+    z-index: 999999;
+    transition: height 500ms;
+}
 
-            #banner h1 {
-                line-height: 100px;
-                position: absolute;
-                top: -20px;
-            }
+    #banner h1 {
+        line-height: 100px;
+        position: absolute;
+        top: -20px;
+    }
 
-            #banner .logo img {
-                position: fixed;
-                top: 0;
-                left: 50%;
-                width: 100px;
-                height: 100px;
-            }
+    #banner .logo img {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        width: 100px;
+        height: 100px;
+    }
 
-            #banner #showBackground {
-                line-height: 100px;
-            }
-        /* tbWrap = textbox wrap */
-        .tbWrap {
-            height: 250px;
-        }
+    #banner #showBackground {
+        line-height: 100px;
+    }
+/* tbWrap = textbox wrap */
+.tbWrap {
+    height: 250px;
+}
 
-            .tbWrap .textbox {
-                position: relative;
-                width: 60%;
-                margin-top: 125px;
-                height: 2.5em;
-                background-color: transparent;
-                border-style: solid;
-                border-width: 0px 0px 1px 0px;
-                border-color: #D55101;
-                color: rgb(229, 126, 33);
-                outline: 0;
-                padding-top: 10px;
-                font-size: 2.5em;
-                line-height: 1.5em;
-            }
+    .tbWrap .textbox {
+        position: relative;
+        width: 60%;
+        margin-top: 125px;
+        height: 2.5em;
+        background-color: transparent;
+        border-style: solid;
+        border-width: 0px 0px 1px 0px;
+        border-color: #D55101;
+        color: rgb(229, 126, 33);
+        outline: 0;
+        padding-top: 10px;
+        font-size: 2.5em;
+        line-height: 1.5em;
+    }
